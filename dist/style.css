@@ -5,7 +5,7 @@ html {
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
-  min-width: 860px;
+  min-width: 958px;
 }
 body {
   box-sizing: border-box;
@@ -274,6 +274,44 @@ a:active {
   --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
 
   height: 266px;
+
+  -webkit-mask: radial-gradient(
+        var(--R) at 50% calc(100% - (var(--size) + var(--p))),
+        blue 99%,
+        #0000 101%
+      )
+      calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(100% + var(--p)), #0000 99%, red 101%)
+      50% calc(100% - var(--size)) / calc(4 * var(--size)) 100% repeat-x;
+  background: rgba(249, 215, 28, 1);
+  width: 65%;
+  margin: 0px auto;
+  border-top-left-radius: 200px 100px;
+  border-top-right-radius: 200px 100px;
+}
+
+.pattyContentMenu {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 0px auto;
+  position: relative;
+  padding-left: 40px;
+}
+
+.menuLeft {
+  width: 50%;
+}
+
+.cheeseMenu {
+  --size: 50px;
+  --p: 25px;
+  --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+
+  height: 300px;
 
   -webkit-mask: radial-gradient(
         var(--R) at 50% calc(100% - (var(--size) + var(--p))),

@@ -86,6 +86,36 @@ const contactPage = () => {
   cheeseContactNumber.innerHTML = "555-555-5552";
   cheeseContactEmail.innerHTML = "realEmail@notFake.com";
   cheeseContactImg.src = "./images/cheese.jpg";
+
+  /* creates second patty elements */
+  let pattyTwoContent = document.createElement("div");
+  let pattyTwoName = document.createElement("div");
+  let pattyTwoHeader = document.createElement("h2");
+  let pattyTwoPosition = document.createElement("div");
+  let pattyTwoNumber = document.createElement("div");
+  let pattyTwoEmail = document.createElement("div");
+  let pattyTwoImg = document.createElement("img");
+  /* sets attributes of patty elements */
+  pattyTwo.setAttribute("class", "patty");
+  pattyTwoContent.setAttribute("class", "pattyContentContact");
+  pattyTwoName.setAttribute("class", "contactName");
+  pattyTwoHeader.innerHTML = "Hades";
+  pattyTwoPosition.setAttribute("class", "contactPosition");
+  pattyTwoPosition.innerHTML = "Third in patty";
+  pattyTwoNumber.setAttribute("class", "contactPosition");
+  pattyTwoNumber.innerHTML = "555-555-5553";
+  pattyTwoEmail.setAttribute("class", "contactPosition");
+  pattyTwoEmail.innerHTML = "realEmail@notFake.com";
+  pattyTwoImg.setAttribute("class", "contactPicture");
+  pattyTwoImg.src = "./images/burgerpatty.jpg";
+  /* sets the elements content */
+  pattyTwo.append(pattyTwoContent);
+  pattyTwoContent.append(pattyTwoName);
+  pattyTwoName.append(pattyTwoHeader);
+  pattyTwoContent.append(pattyTwoPosition);
+  pattyTwoContent.append(pattyTwoNumber);
+  pattyTwoContent.append(pattyTwoEmail);
+  pattyTwoContent.append(pattyTwoImg);
 };
 
 export default contactPage;
