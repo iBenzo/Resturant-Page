@@ -1,101 +1,291 @@
-body {
+html {
+  background-image: url(./images/ORFF0J0.jpg);
   height: 100vh;
   width: 100vw;
-  background-color: gray;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  min-width: 860px;
+}
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  position: relative;
 }
 
-.header {
-  margin-top: 5vh;
-  height: 25vh;
-  width: 100vw;
+header {
+  box-sizing: border-box;
+  background-color: #c4a484;
+  height: 200px;
+  padding-top: 5px;
+  border-top-left-radius: 250px 100px;
+  border-top-right-radius: 250px 100px;
+  width: 65%;
+  margin: 10px auto 20px auto;
+}
+
+nav {
+  width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#home {
+  top: 70px;
+  left: 112px;
+  cursor: pointer;
+}
+
+#menu {
+  top: 30px;
+  left: 212px;
+  cursor: pointer;
+}
+
+#contact {
+  top: 70px;
+  left: 312px;
+  cursor: pointer;
+}
+
+#seedLeft {
+  top: 30px;
+  left: 12px;
+}
+
+#seedRight {
+  top: 30px;
+  left: 412px;
+}
+.cover {
+  /* Center the content */
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
 
-.inner-header {
-  height: 80%;
-  width: 70%;
-  display: flex;
-  align-items: center;
+  /* Border */
+  border: 2px solid #d1d5db;
+  border-radius: 0px 50% 50% 50%;
+
+  /* Background */
+  background: rgba(255, 255, 255, 0.5);
+
+  /* Angle at the top */
+  transform: rotate(45deg);
+
+  /* Size */
+  height: 4rem;
+  width: 4rem;
+  box-sizing: border-box;
+  position: absolute;
 }
-.left-header,
-.right-header,
-.center-header {
-  height: 100%;
-  width: 33.3%;
-  display: flex;
+.coverContent {
+  transform: rotate(-45deg);
+}
+.cheese {
+  --size: 50px;
+  --p: 25px;
+  --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+
+  height: 200px;
+
+  -webkit-mask: radial-gradient(
+        var(--R) at 50% calc(100% - (var(--size) + var(--p))),
+        blue 99%,
+        #0000 101%
+      )
+      calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(100% + var(--p)), #0000 99%, red 101%)
+      50% calc(100% - var(--size)) / calc(4 * var(--size)) 100% repeat-x;
+  background: rgba(249, 215, 28, 1);
+  width: 65%;
+  margin: 0px auto;
+  border-top-left-radius: 200px 100px;
+  border-top-right-radius: 200px 100px;
 }
 
 .logo {
-  width: 100%;
-  height: 100%;
-}
-.tabs-container {
-  display: grid;
-  grid-template-areas:
-    "menu order gift"
-    "private private contact";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 15px;
-}
-
-.tabs {
-  text-align: center;
-  list-style: none;
-}
-.tabs.menu {
-  grid-area: menu;
-}
-.tabs.order {
-  grid-area: order;
-}
-.tabs.gift {
-  grid-area: gift;
-}
-.tabs.private {
-  grid-area: private;
-}
-.tabs.contact {
-  grid-area: contact;
-}
-.content {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
 }
-.inner-content {
+
+.logoImg {
+  height: 50%;
+  width: 50%;
+}
+
+.patty {
+  height: 250px;
+  background: rgb(61, 43, 31);
+  margin: 0px auto 30px auto;
+  width: 65%;
+  border-top-left-radius: 200px 75px;
+  border-top-right-radius: 200px 75px;
+  border-bottom-left-radius: 200px 75px;
+  border-bottom-right-radius: 200px 75px;
+}
+
+.pattyContent {
+  height: 100%;
   width: 70%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
-
-.updates {
-  width: 612px;
-  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px auto;
+}
+
+.lettuce {
+  --size: 50px;
+  --p: 25px;
+  --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+
+  height: 350px;
+
+  -webkit-mask: radial-gradient(
+        var(--R) at left 50% bottom calc(var(--size) + var(--p)),
+        #000 99%,
+        #0000 101%
+      )
+      left calc(50% - 2 * var(--size)) bottom 0 / calc(4 * var(--size)) 51%
+      repeat-x,
+    radial-gradient(
+        var(--R) at left 50% bottom calc(-1 * var(--p)),
+        #0000 99%,
+        #000 101%
+      )
+      left 50% bottom var(--size) / calc(4 * var(--size))
+      calc(51% - var(--size)) repeat-x,
+    radial-gradient(
+        var(--R) at left 50% top calc(var(--size) + var(--p)),
+        #000 99%,
+        #0000 101%
+      )
+      left calc(50% - 2 * var(--size)) top 0 / calc(4 * var(--size)) 51%
+      repeat-x,
+    radial-gradient(
+        var(--R) at left 50% top calc(-1 * var(--p)),
+        #0000 99%,
+        #000 101%
+      )
+      left 50% top var(--size) / calc(4 * var(--size)) calc(51% - var(--size))
+      repeat-x;
+  background: green;
+  border: none;
+  border-top-left-radius: 200px 75px;
+  border-top-right-radius: 200px 75px;
+  border-bottom-left-radius: 200px 75px;
+  border-bottom-right-radius: 200px 75px;
+  width: 65%;
+  margin: 0px auto;
+}
+
+.lettuce + .lettuce {
+  --d: bottom;
+}
+
+.cheeseInner {
+  display: flex;
   flex-direction: column;
-}
-hr {
-  width: 100%;
-}
-
-.buttons {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  border: 3px solid;
-  height: 25px;
-  padding: 5px;
-  cursor: pointer;
+  justify-content: center;
+}
+.openHours {
+  text-align: center;
+}
+
+.hoursTitle {
+  padding-right: 25%;
+}
+
+footer {
+  box-sizing: border-box;
+  background-color: #c4a484;
+  height: 200px;
+  padding-top: 5px;
+  border-bottom-left-radius: 400px 100px;
+  border-bottom-right-radius: 400px 100px;
+  width: 65%;
+  margin: 10px auto 30px auto;
+  text-align: center;
+}
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+.pattyContentContact {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 0px auto;
+  position: relative;
+  padding-left: 40px;
+}
+
+.contactPosition {
+  padding-left: 50px;
+}
+.contactPicture {
+  height: 150px;
+  width: 150px;
+  border-radius: 8px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.cheeseInnerContact {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin: 0px auto;
+  position: relative;
+  padding-left: 40px;
+}
+
+.cheeseContact {
+  --size: 50px;
+  --p: 25px;
+  --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+
+  height: 266px;
+
+  -webkit-mask: radial-gradient(
+        var(--R) at 50% calc(100% - (var(--size) + var(--p))),
+        blue 99%,
+        #0000 101%
+      )
+      calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(100% + var(--p)), #0000 99%, red 101%)
+      50% calc(100% - var(--size)) / calc(4 * var(--size)) 100% repeat-x;
+  background: rgba(249, 215, 28, 1);
+  width: 65%;
+  margin: 0px auto;
+  border-top-left-radius: 200px 100px;
+  border-top-right-radius: 200px 100px;
 }
